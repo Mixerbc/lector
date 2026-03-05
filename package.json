@@ -1,0 +1,9 @@
+{
+  "name": "lector-noticias",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lector de noticias con Netlify Functions + NewsAPI",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

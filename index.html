@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lector de Noticias - NewsAPI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ========== ENCABEZADO ========== -->
+  <header class="encabezado" role="banner">
+    <div class="contenedor">
+      <h1>Lector de Noticias</h1>
+      <p>Noticias en tiempo real con Fetch y JSON (NewsAPI)</p>
+    </div>
+  </header>
+
+  <!-- ========== CUERPO PRINCIPAL ========== -->
+  <main class="contenedor principal" role="main">
+    <section class="panel-controles" aria-label="Controles">
+      <div class="filtros">
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" aria-label="Categoría de noticias">
+          <option value="general">General</option>
+          <option value="business">Negocios</option>
+          <option value="entertainment">Entretenimiento</option>
+          <option value="health">Salud</option>
+          <option value="science">Ciencia</option>
+          <option value="sports">Deportes</option>
+          <option value="technology">Tecnología</option>
+        </select>
+        <button type="button" id="btnCargar">Cargar noticias</button>
+        <button type="button" id="btnRefrescar" class="secundario" aria-label="Refrescar noticias sin recargar la página">Refrescar</button>
+      </div>
+      <p id="estado" class="estado" aria-live="polite">Selecciona una categoría y pulsa «Cargar noticias».</p>
+    </section>
+
+    <!-- ========== ÁREA DE NOTICIAS ========== -->
+    <section id="areaNoticias" class="area-noticias" aria-label="Listado de noticias">
+      <h2 class="titulo-area">Noticias</h2>
+      <div id="listaNoticias" class="grid-noticias">
+        <!-- Las noticias se insertan aquí dinámicamente -->
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

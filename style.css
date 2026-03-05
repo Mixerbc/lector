@@ -1,100 +1,176 @@
+/* ========== Reset y base ========== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #f3f7ff, #eefaf5);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
   color: #1f2937;
-  font-family: Arial, sans-serif;
 }
 
-#contenedor {
-  width: 90%;
-  max-width: 980px;
-  margin: 24px auto;
-  padding: 18px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+/* ========== Contenedor ========== */
+.contenedor {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.seccion {
-  background: #f9fbff;
-  margin: 12px 0;
-  padding: 16px;
-  border-radius: 10px;
-}
-
+/* ========== Encabezado ========== */
 .encabezado {
-  background: #eaf3ff;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: white;
+  padding: 28px 0;
+  margin-bottom: 22px;
 }
 
-.pie {
-  background: #eefcf4;
+.encabezado h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
 }
 
-h1 {
-  color: #1d4ed8;
-  margin-top: 0;
+.encabezado p {
+  margin: 0;
+  opacity: 0.95;
 }
 
-h2 {
-  color: #0f172a;
-  margin-top: 0;
-}
-
-.resaltado {
-  color: #b91c1c;
-  font-weight: bold;
-  background: #fee2e2;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-.lista-razones li {
-  margin: 8px 0;
-}
-
-.dos-columnas {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.columna {
-  flex: 1 1 420px;
-}
-
-.imagen-trabajo {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #dbeafe;
-}
-
-#tabla-requisitos {
-  width: 100%;
-  border-collapse: collapse;
+/* ========== Panel de controles ========== */
+.panel-controles {
   background: #ffffff;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 18px;
 }
 
-#tabla-requisitos th,
-#tabla-requisitos td {
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.filtros label {
+  font-weight: bold;
+}
+
+.filtros select,
+.filtros button {
+  padding: 10px 12px;
+  border-radius: 8px;
   border: 1px solid #cbd5e1;
-  padding: 10px;
-  text-align: left;
+  font-size: 14px;
 }
 
-#tabla-requisitos th {
-  background: #dbeafe;
-  color: #1e3a8a;
+.filtros button {
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  font-weight: bold;
 }
 
-@media (max-width: 700px) {
-  #contenedor {
-    width: 95%;
-    padding: 12px;
-  }
-  .imagen-trabajo {
-    height: 220px;
-  }
+.filtros button:hover {
+  background: #1d4ed8;
+}
+
+.filtros button.secundario {
+  background: #64748b;
+}
+
+.filtros button.secundario:hover {
+  background: #475569;
+}
+
+.estado {
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* ========== Área de noticias ========== */
+.principal {
+  padding-bottom: 2rem;
+}
+
+.area-noticias {
+  margin-top: 1rem;
+}
+
+.titulo-area {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: #1e293b;
+}
+
+#listaNoticias {
+  min-height: 120px;
+}
+
+.grid-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+/* ========== Tarjeta de noticia ========== */
+.noticia {
+  background: white;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #e5e7eb;
+}
+
+.noticia-contenido {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.noticia h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.noticia h3 a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.noticia h3 a:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.descripcion {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #334155;
+}
+
+/* ========== Mensajes (cargando, error, sin resultados) ========== */
+.mensaje {
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 18px;
+  color: #475569;
 }
