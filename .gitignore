@@ -6,6 +6,7 @@ node_modules/
 
 # Environment variables / secrets
 .env
+<<<<<<< HEAD
 .env.*
 
 # Logs
@@ -18,3 +19,5 @@ yarn-error.log*
 Thumbs.db
 .vscode/*
 !.vscode/settings.json
+=======
+>>>>>>> b696595cd1d838fe06b47ae490280291c0715149
